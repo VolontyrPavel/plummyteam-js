@@ -97,10 +97,34 @@
 //70 === 01:10
 // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
 
+// const globalMinutes = 70;
+// const hours = Math.floor(globalMinutes / 60);
+// const modifiedHours = String(hours).padStart(2, 0);
+// const minutes = globalMinutes % 60;
+// const modifiedMinutes = String(minutes).padStart(2, 0);
+
+// const time = `${modifiedHours}:${modifiedMinutes}`;
+
+// console.log(time);
+
 //TODO: 7 ===================================
 //Напишіть цикл, який виводить у консоль
 // числа від max до min за спаданням
 // Додайте усі парні числа від min до max
+
+// const max = 50;
+// const min = 23;
+// let total = 0;
+
+// for (let i = max; i >= min; i -= 1) {
+//   if (i % 2 !== 0) {
+//     continue;
+//   }
+//   console.log('парні:', i);
+//   total += i;
+// }
+
+// console.log(`Сума усіх парних: ${total}`);
 
 //TODO: 8 ===================================
 //Напишіть код, який запитуватиме

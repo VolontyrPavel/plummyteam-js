@@ -6,6 +6,21 @@
 // const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
 
 //? Answer
+// function findSmallerNumber(numbers) {
+//   if (!Array.isArray(numbers)) {
+//     return alert('Argument must be an array');
+//   }
+//   let min = numbers[0];
+//   for (let i = 1; i < numbers.length; i += 1) {
+//     if (numbers[i] < min) {
+//       min = numbers[i];
+//     }
+//   }
+//   return min;
+// }
+
+// const smallestNumber = findSmallerNumber(numbers);
+// console.log(smallestNumber); // 2
 
 //?
 
@@ -17,6 +32,22 @@
 //яка приймає довільну кількість
 //аргументів і повертає їхнє середнє значення.
 //Додати перевірку, що аргументи це числа.
+
+// function calculateAverage() {
+//   const args = arguments;
+//   let sum = 0;
+//   let totalCount = 0;
+//   for (const arg of args) {
+//     if (typeof arg !== 'number') {
+//       continue;
+//     }
+//     sum += arg;
+//     totalCount += 1;
+//   }
+//   return sum / totalCount;
+// }
+
+// console.log(calculateAverage(10, 10, 20, 200));
 
 // console.log(calculateAverage(10, 10, 20, 200)); // 60
 
@@ -96,7 +127,31 @@ const filmoteka = [
 
 //? Напишіть функцію getAllTitlesOfFilms(films), яка повертає масив із усіма назвами фільмів.
 
+function getAllTitlesOfFilm(films) {
+  const newArray = [];
+
+  for (const film of films) {
+    newArray.push(film.title);
+  }
+
+  return newArray;
+}
+
+console.log(getAllTitlesOfFilm(filmoteka));
+
 //? Напишіть функцію findFilmByName(films, filmTitle), яка шукає фільм за назвою.
+
+function findFilmByName(films, filmTitle) {
+  for (const film of films) {
+    if (film.title === filmTitle) {
+      return film;
+    }
+  }
+
+  return `${filmTitle} не знайдено`;
+}
+
+console.log(findFilmByName(filmoteka, 'Luca'));
 
 //? Напишіть функцію getAdultFilms(films), яка повертає масив усіх дорослих фільмів.
 

@@ -105,7 +105,9 @@ const array = [3, 5, 6, 34, 8, 83, 12, 34];
 //TODO:=========task-8=================
 // ? Знайдіть перше непарне число
 
-// const numbers = [2, 1, 6, 8, 9, 10, 12]
+// const numbers = [2, 1, 6, 8, 9, 10, 12];
+
+// console.log(numbers.find((el) => el % 2 !== 0));
 
 //TODO:===========task-9===============
 
@@ -198,17 +200,22 @@ const users = [
 
 //TODO:==========================
 // Отримати масив імен всіх користувачів (поле name).
-
+// console.log(users.map(({ name }) => name));
 //TODO:==========================
 // Отримати масив об'єктів користувачів за кольором очей (eyeColor).
-
-// console.log(getUsersByColor(users, 'brown'))
-// console.log(getUsersByColor(users, 'blue')) // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
+// const getUsersByColor = (array, colorEye) =>
+//   array.filter(({ eyeColor }) => eyeColor === colorEye);
+// console.log(getUsersByColor(users, "brown"));
+// console.log(getUsersByColor(users, "blue")); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
 
 //TODO:==========================
 // Отримати масив імен користувачів за статтю (поле gender)
-
-// console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
+// const getUsersWithGender = (array, gend) =>
+//   array
+//     .filter(({ gender }) => gender === gend)
+//     .map(({ name }) => name)
+//     .sort((a, b) => a.localeCompare(b));
+// console.log(getUsersWithGender(users, "male")); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 
 //TODO:==========================
 // Отримати масив тільки неактивних користувачів (поле isActive).

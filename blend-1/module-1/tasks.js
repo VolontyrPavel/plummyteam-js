@@ -120,7 +120,7 @@
 //   if (i % 2 !== 0) {
 //     continue;
 //   }
-//   console.log('парні:', i);
+//   console.log("парні:", i);
 //   total += i;
 // }
 
@@ -209,19 +209,30 @@
 //   1,
 //   0,
 //   54,
-//   'doc',
+//   "doc",
 //   null,
-//   'jpg',
+//   "jpg",
 //   undefined,
-//   '',
-//   'png',
-//   'exe',
+//   "",
+//   "png",
+//   "exe",
 //   false,
-//   'mp4',
+//   "mp4",
 //   NaN,
-//   'hbs',
+//   "hbs",
 // ];
 
+// function clearArray(array) {
+//   const newArray = [];
+
+//   for (const item of array) {
+//     if (item) {
+//       newArray.push(item);
+//     }
+//   }
+//   console.log(newArray);
+// }
+// clearArray(array);
 //TODO: 16 ===================================
 // Перевірити два масиву і дізнатися, чи вони рівні
 

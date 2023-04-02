@@ -9,11 +9,17 @@
 // ключ:значення використовуючи Object.keys() і for...of
 
 // const user = {
-//   name: 'John',
+//   name: "John",
 //   age: 30,
-//   hobby: 'reading',
+//   hobby: "reading",
 //   premium: true,
 // };
+// user.mood = "happy";
+// user.hobby = "skydiving";
+// user.premium = false;
+// for (const element of Object.keys(user)) {
+//   console.log(`${element}: ${user[element]}`);
+// }
 
 //? Answer
 
@@ -25,16 +31,19 @@
 // Є 2 варіанти рішення, спочатку напишемо функцію, потім вирішимо простим способом
 
 // const obj = {
-//   name: 'Igor',
-//   car: 'Mercedes',
-//   carColor: 'black',
+//   name: "Igor",
+//   car: "Mercedes",
+//   carColor: "black",
 // };
 
-//? Answer
+// // function getBool(obj, key) {
+// //   const keys = Object.keys(obj);
+// //   return keys.includes(key);
+// // }
 
-//?
+// const getBool = (obj, key) => key in obj;
 
-// console.log(getBool(obj, 'car')); // true
+// console.log(getBool(obj, "car")); // true
 
 //TODO:==========task-3=============
 // У нас є об'єкт, у якому зберігатимуться зарплати

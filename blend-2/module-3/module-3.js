@@ -97,7 +97,7 @@
 // };
 
 // function changeObject(obj) {
-//   console.log(Object.entries(obj)) 
+//   console.log(Object.entries(obj))
 // }
 
 // changeObject(user);
@@ -113,9 +113,19 @@
 //   title: 'My menu',
 // };
 
-//? Answer
+// //? Answer
 
-//?
+// const multiplyNumeric = (obj) => {
+//   for (const key in obj) {
+//     console.log(obj.hasOwnProperty(key));
+//     if (obj.hasOwnProperty(key) && typeof obj[key] === 'number') {
+//       obj[key] *= 2;
+//     }
+//   }
+//   return obj;
+// };
+
+// //?
 
 // console.log(multiplyNumeric(menu));
 
@@ -135,7 +145,22 @@
 
 //? Answer
 
-// //?
+// const findBestEmployee = (obj = {}) => {
+//   let bestEmployee;
+//   let bestEmployeeTask = 0;
+//   for (const key in obj) {
+//     if (obj.hasOwnProperty(key)) {
+//       //   console.log(`${key} - ${obj[key]}`);
+//       if (obj[key] > bestEmployeeTask) {
+//         bestEmployee = key;
+//         bestEmployeeTask = obj[key];
+//       }
+//     }
+//   }
+//   return bestEmployee;
+// };
+
+// // //?
 
 // console.log(
 //   findBestEmployee({

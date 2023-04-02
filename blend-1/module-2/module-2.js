@@ -55,71 +55,71 @@
 const filmoteka = [
   {
     id: 1,
-    title: 'Duna',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    title: "Duna",
+    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     rating: 10,
     actors: [
-      'Amelia Gibson',
-      'Cameron Clayton',
-      'Viola Vasquez',
-      'Lula Collins',
-      'Victor Nichols',
+      "Amelia Gibson",
+      "Cameron Clayton",
+      "Viola Vasquez",
+      "Lula Collins",
+      "Victor Nichols",
     ],
     adult: false,
   },
   {
     id: 2,
-    title: 'Venom',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    title: "Venom",
+    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     rating: 8,
     actors: [
-      'Inez Greer',
-      'Barry Curtis',
-      'Blanche Rios',
-      'Glen Perry',
-      'Logan Powers',
+      "Inez Greer",
+      "Barry Curtis",
+      "Blanche Rios",
+      "Glen Perry",
+      "Logan Powers",
     ],
     adult: true,
   },
   {
     id: 3,
-    title: 'Luca',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    title: "Luca",
+    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     rating: 9,
     actors: [
-      'Marguerite Gibbs',
-      'Lora Alvarez',
-      'Jorge Simpson',
-      'Thomas Hall',
-      'Darrell Hunter',
+      "Marguerite Gibbs",
+      "Lora Alvarez",
+      "Jorge Simpson",
+      "Thomas Hall",
+      "Darrell Hunter",
     ],
     adult: false,
   },
   {
     id: 4,
-    title: 'Free Guy',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    title: "Free Guy",
+    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     rating: 6,
     actors: [
-      'Calvin Andrews',
-      'Mamie Myers',
-      'Madge Townsend',
-      'Ralph Kim',
-      'Jorge Reese',
+      "Calvin Andrews",
+      "Mamie Myers",
+      "Madge Townsend",
+      "Ralph Kim",
+      "Jorge Reese",
     ],
     adult: true,
   },
   {
     id: 5,
-    title: 'Saw',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+    title: "Saw",
+    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     rating: 7,
     actors: [
-      'Adele Marsh',
-      'Melvin Burgess',
-      'Jesus Reese',
-      'Harriet Moreno',
-      'Curtis Cox',
+      "Adele Marsh",
+      "Melvin Burgess",
+      "Jesus Reese",
+      "Harriet Moreno",
+      "Curtis Cox",
     ],
     adult: true,
   },
@@ -127,31 +127,31 @@ const filmoteka = [
 
 //? Напишіть функцію getAllTitlesOfFilms(films), яка повертає масив із усіма назвами фільмів.
 
-function getAllTitlesOfFilm(films) {
-  const newArray = [];
+// function getAllTitlesOfFilm(films) {
+//   const newArray = [];
 
-  for (const film of films) {
-    newArray.push(film.title);
-  }
+//   for (const film of films) {
+//     newArray.push(film.title);
+//   }
 
-  return newArray;
-}
+//   return newArray;
+// }
 
-console.log(getAllTitlesOfFilm(filmoteka));
+// console.log(getAllTitlesOfFilm(filmoteka));
 
 //? Напишіть функцію findFilmByName(films, filmTitle), яка шукає фільм за назвою.
 
-function findFilmByName(films, filmTitle) {
-  for (const film of films) {
-    if (film.title === filmTitle) {
-      return film;
-    }
-  }
+// function findFilmByName(films, filmTitle) {
+//   for (const film of films) {
+//     if (film.title === filmTitle) {
+//       return film;
+//     }
+//   }
 
-  return `${filmTitle} не знайдено`;
-}
+//   return `${filmTitle} не знайдено`;
+// }
 
-console.log(findFilmByName(filmoteka, 'Luca'));
+// console.log(findFilmByName(filmoteka, 'Luca'));
 
 //? Напишіть функцію getAdultFilms(films), яка повертає масив усіх дорослих фільмів.
 

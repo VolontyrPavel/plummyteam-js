@@ -59,21 +59,27 @@
 // };
 
 // let sum = 0;
-
-//? Answer
-
-//?
+// if (Object.keys(salaries) !== 0) {
+//     for (const salary of Object.values(salaries)) {
+//         sum += salary
+//     }
+// }
 
 // console.log(sum);
+// console.log(Object.values(salaries))
 
 //TODO:==========task-4=============
 // Напишіть функцію updateObject, яка приймає об'єкт та повертає
 // новий об'єкт без зазначених параметрів
 // Очікуваний результат ({a: 1, b: 2, c: 3}, 'b', 'a') => {c: 3}
 
-//? Answer
-
-//?
+// function updateObject(obj, ...removeKeys) {
+//    let newObject = {...obj}
+//    for (const item of removeKeys) {
+//     delete newObject[item]
+//    }
+//    return newObject
+// }
 
 // console.log(updateObject({ a: 1, b: 2, c: 3 }, 'b', 'a')); // {c: 3}
 
@@ -90,9 +96,9 @@
 //   merried: false,
 // };
 
-// ?Answer
-
-//?
+// function changeObject(obj) {
+//   console.log(Object.entries(obj)) 
+// }
 
 // changeObject(user);
 

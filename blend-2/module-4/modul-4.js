@@ -230,8 +230,8 @@ const users = [
 
 //TODO:==========================
 // Отримати загальну суму балансу (поле balance) всіх користувачів.
-
-// console.log(calculateTotalBalance(users)); // 20916
+//const calculateTotalBalance = (array) => array.reduce((acc, user) => (user.balance + acc), 0)
+//console.log(calculateTotalBalance(users)); // 20916
 
 //TODO:==========================
 // Масив імен всіх користувачів, у яких є товарищь із зазначеним ім'ям.
@@ -269,11 +269,35 @@ const users = [
 //     Харків: new Date('2023-07-10'),
 // }
 
+// var#1
+// const concertsToArray = (obj) => Object.entries(obj)
+//   .filter((date) => date[1] > Date.now())
+//   .sort((a, b) => a[1] - b[1])
+//   .map((city) => city[0])
+
+
+// var#2
+// const concertsToArray = (obj) => Object.keys(obj)
+//   .filter((city) => obj[city] > Date.now())
+//   .sort((a, b) => obj[a] - obj[b])
+
 // console.log(concertsToArray(concerts))
 
 //TODO:=========task-11=================
 // У кожному масиві якщо унікальний рядок, у якому не повторюються літери. Знайдіть і виведіть цей рядок.
 // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt
+
+// var#1
+
+// const findUniq = (array) => {
+//   return array.find((el, index, arr) => {
+//     const sortedArray = el.split('').sort().join('');
+//     // console.log(sortedArray);
+//     return arr.every((s, i) => {
+//       return i === index || sortedArray !== s.split('').sort().join('');
+//     }) 
+//   })
+// }
 
 // console.log(findUniq(['abc', 'acb', 'bac', 'foo', 'bca', 'cab', 'cba'])); // === 'foo'
 // console.log(findUniq(['fghj', 'ghfj', 'abcd', 'jhgf', 'fghj', 'fgjh', 'ghjf'])); // === 'abcd'

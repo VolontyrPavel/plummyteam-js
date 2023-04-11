@@ -3,28 +3,28 @@
 
 // Виправте помилки, щоб код працював
 // const product = {
-//     price: 5000,
-//     showPrice() {
-//         console.log(price)
-//     },
-// }
-// product.showPrice()
+//   price: 5000,
+//   showPrice() {
+//     console.log(this.price);
+//   },
+// };
+// product.showPrice();
 
 //TODO:=================2=============================
 
 //Виправте помилки, щоб код працював
 // const product = {
-//     price: 5000,
-//     showPrice() {
-//         console.log(this.price)
-//     },
-// }
+//   price: 5000,
+//   showPrice() {
+//     console.log(this.price);
+//   },
+// };
 
 // function callAction(action) {
-//     action()
+//   action();
 // }
 
-// callAction(product.showPrice)
+// callAction(product.showPrice.bind(product));
 
 //? answer
 
@@ -39,9 +39,20 @@
 //Додай метод getInfo(), який повертає рядок:
 //`Користувачеві ${} ${} років і в нього ${} публікацій.`
 
-// const polly = new User({ userName: 'Polly', age: 30, numbersOfPost: 15 })
-// console.log(polly)
-// polly.getInfo()
+// const User = function (userObject) {
+//   const { userName, age, numbersOfPost } = userObject;
+//   this.userName = userName;
+//   this.age = age;
+//   this.numbersOfPost = numbersOfPost;
+//   this.getInfo = function () {
+//     console.log(
+//       `Користувачеві ${this.userName} ${this.age} років і в нього ${this.numbersOfPost} публікацій.`
+//     );
+//   };
+// };
+// const polly = new User({ userName: "Polly", age: 30, numbersOfPost: 15 });
+// console.log(polly);
+// polly.getInfo();
 
 //TODO:=========task-4=================
 
@@ -53,11 +64,28 @@
 //getItems() - повертайте масив товарів
 //addItems(item) - отримує новий товар та додає його до поточних
 //removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних
+// const Storage = function (itemsArray) {
+//   this.items = itemsArray;
+// };
 
-// const storage = new Storage(['apple', 'banana', 'mango'])
+// Storage.prototype.getItems = function () {
+//   return this.items;
+// };
+// Storage.prototype.addItems = function (item) {
+//   this.items.push(item);
+//   return this.items;
+// };
+// Storage.prototype.removeItem = function (item) {
+//   this.items = this.items.filter((elem) => elem !== item);
+//   return this.items;
+// };
 
-// console.log(storage)
-// console.log(storage.removeItem('apple'))
+// const storage = new Storage(["apple", "banana", "mango"]);
+
+// // console.log(storage);
+// console.log(storage.removeItem("apple"));
+// console.log(storage.getItems());
+// console.log(storage.addItems("pineapple"));
 
 //TODO:=========task-5=================
 //Напиши клас Client який створює об'єкт
@@ -65,12 +93,36 @@
 //Оголоси приватні властивості #login #email,
 //доступ до яких зроби через геттер та сеттер login email
 
-// const client = new Client('mango', 'mango@gmail.com')
+// class Client {
+//   #login;
+//   #email;
 
-// client.changeEmail = 'mango555@gmail.com'
-// console.log(client.getClientData.email)
-// client.changeLogin = '12345'
-// console.log(client.getClientData.login)
+//   constructor(login, email) {
+//     this.#login = login;
+//     this.#email = email;
+//   }
+
+//   get getClientData() {
+//     return {
+//       email: this.#email,
+//       login: this.#login,
+//     };
+//   }
+
+//   set changeLogin(newLogin) {
+//     this.#login = newLogin;
+//   }
+//   set changeEmail(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
+
+// const client = new Client("mango", "mango@gmail.com");
+// console.log(client);
+// client.changeEmail = "mango555@gmail.com";
+// console.log(client.getClientData.email);
+// client.changeLogin = "12345";
+// console.log(client.getClientData.login);
 
 //TODO:=========task-6=================
 //Напиши клас Notes який управляє колекцією нотаток у
@@ -81,17 +133,46 @@
 //Додай методи addNote(note), removeNote(text)
 //updatePriority(text, newPriority)
 
-// const note1 = new Notes()
+// class Notes {
+//   static Priority() {
+//     return {
+//       HIGHT: "hight",
+//       LOW: "low",
+//     };
+//   }
 
-// note1.addNote({ text: 'Note1', priority: Notes.Priority().LOW })
-// note1.addNote({ text: 'Note2', priority: Notes.Priority().LOW })
-// console.table(note1.items)
+//   constructor() {
+//     this.items = [];
+//   }
 
-// note1.removeNote('Note1')
-// console.table(note1.items)
+//   addNote(note) {
+//     return this.items.push(note);
+//   }
 
-// note1.updatePriority({ text: 'Note2', newPriority: Notes.Priority().HIGHT })
-// console.table(note1.items)
+//   removeNote(text) {
+//     return (this.items = this.items.filter((elem) => elem.text !== text));
+//   }
+
+//   updatePriority({ text, newPriority }) {
+//     return this.items.map((el) => {
+//       if (el.text === text) {
+//         el.priority = newPriority;
+//       }
+//     });
+//   }
+// }
+
+// const note1 = new Notes();
+
+// note1.addNote({ text: "Note1", priority: Notes.Priority().LOW });
+// note1.addNote({ text: "Note2", priority: Notes.Priority().LOW });
+// console.table(note1.items);
+
+// note1.removeNote("Note1");
+// console.table(note1.items);
+
+// note1.updatePriority({ text: "Note2", newPriority: Notes.Priority().HIGHT });
+// console.table(note1.items);
 
 //TODO:=========task-7=================
 // Створи клас для калькулятора, який має такі методи:

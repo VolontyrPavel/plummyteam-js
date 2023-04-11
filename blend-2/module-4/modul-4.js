@@ -302,3 +302,7 @@ const users = [
 // console.log(findUniq(['abc', 'acb', 'bac', 'foo', 'bca', 'cab', 'cba'])); // === 'foo'
 // console.log(findUniq(['fghj', 'ghfj', 'abcd', 'jhgf', 'fghj', 'fgjh', 'ghjf'])); // === 'abcd'
 // console.log(findUniq(['qwe', 'camp', 'acmp', 'pmac', 'camp', 'apmc', 'pmac'])); // === 'qwe'
+
+const planets = ["Earth", "Mars", "Venus", "Jupiter"];
+// Change code below this line
+const planetsLengths = planets.map((planet) => planet.lengths);

@@ -61,3 +61,45 @@ function onBackdropClick(evt) {
 
   closeModalWindow();
 }
+
+
+// ### Робота з формою:
+
+// 1 - Реалізуй відправку данних через подію "submit" на формі
+// 2 - Зроби перевірку на заповнення інпутів "email" і "password". Вони не повинні бути пустими. Поле "name", може бути пустим для приватності користувача
+// виводь про це в повідемленні за допомогою метода "alert" - "email or password is empty"
+// 3 - При відправки форми в консоль виведи обьект з данними користувача. Реалізуй перевірку, якщо еористувач не ввів імʼя, записуй в обьект рядок "Anonimus"
+
+// #### Виконуй завдвння послідовно:
+
+// - Спочатку знайди елементи у Дом дереві, з якими тобі потрібно працювати.
+// - Повісь слухача події на форму
+// - Пропиши колбєк функцію onSubmit. Не забувай про відміну поведінки по змовчуванню. Значення інпутів знайди за допомогою currentTarget і його elements.
+// - Після отправки почисти форму і реалізуй автоматичне закриття модального вікна
+
+const submitFormEl = document.querySelector('.js-modal__form');
+submitFormEl.addEventListener('submit', onSubmint);
+
+function onSubmint (e) {
+  e.preventDefault();
+  console.dir(e.currentTarget);
+
+  const { elements: {name, email, password} } = e.currentTarget;
+  console.log(name);
+
+  if (!email.value || !password.value) {
+    return alert("email or password is empty");
+  }
+
+  const userData = {
+    name: name.value || 'anonymus',
+    email: email.value,
+    password: password.value,
+  }
+
+  console.log(userData);
+
+  submitFormEl.reset();
+
+  closeModalWindow();
+}

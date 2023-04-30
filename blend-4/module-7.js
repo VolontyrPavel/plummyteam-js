@@ -25,18 +25,21 @@
 //   перевірки і пишемо логіку. Обчислення олбимо за допомогою "switch".
 
 const refs = {
-  containerEl: document.querySelector(".js-container"),
-  showBtnEl: document.querySelector(".js-show__btn"),
+  containerEl: document.querySelector('.js-container'),
+  showBtnEl: document.querySelector('.js-show__btn'),
 };
 
-refs.showBtnEl.addEventListener("click", (e) => {
-  if (refs.showBtnEl.textContent === "Приховати калькулятор") {
-    refs.containerEl.innerHTML = "";
-    refs.showBtnEl.textContent = "Показати калькулятор";
-    refs.showBtnEl.classList.remove("calc-close");
+refs.showBtnEl.addEventListener('click', (e) => {
+  if (refs.showBtnEl.textContent === 'Приховати калькулятор') {
+    refs.containerEl.innerHTML = '';
+    refs.showBtnEl.textContent = 'Показати калькулятор';
+    refs.showBtnEl.classList.remove('calc-close');
     return;
   }
-  const markup = `<div class="calculator-display">
+
+  const markup = `
+ <div class="calculator js-calculator">
+  <div class="calculator-display">
     <input class="js-result" type="text" name="result" value="0" disabled />
   </div>
   <div class="calculator-row">
@@ -70,7 +73,8 @@ refs.showBtnEl.addEventListener("click", (e) => {
   </div>
 </div>
 `;
-  refs.containerEl.insertAdjacentHTML("beforeend", markup);
-  refs.showBtnEl.textContent = "Приховати калькулятор";
-  refs.showBtnEl.classList.add("calc-close");
+
+  refs.containerEl.insertAdjacentHTML('beforeend', markup);
+  refs.showBtnEl.textContent = 'Приховати калькулятор';
+  refs.showBtnEl.classList.add('calc-close');
 });

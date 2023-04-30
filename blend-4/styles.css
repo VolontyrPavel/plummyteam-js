@@ -11,7 +11,7 @@
 body {
   background-color: #36393f;
   color: #dcddde;
-  font-family: 'Whitney', sans-serif;
+  font-family: "Whitney", sans-serif;
 }
 
 button {
@@ -168,7 +168,7 @@ button.calc-btn__show:hover {
   margin-bottom: 10px;
 }
 
-.calculator-display input[type='text'] {
+.calculator-display input[type="text"] {
   width: 100%;
   font-size: 30px;
   text-align: right;
@@ -222,7 +222,6 @@ button.calc-btn__show:hover {
 .calculator-button:active {
   background-color: #d3d3d3;
 }
-
 /**
   |============================
   | todos
@@ -247,7 +246,7 @@ button.calc-btn__show:hover {
   padding: 8px;
 }
 
-button[type='submit'] {
+button[type="submit"] {
   background-color: #7289da;
   border: none;
   border-radius: 5px;
@@ -259,7 +258,7 @@ button[type='submit'] {
   transition: background-color 0.3s;
 }
 
-button[type='submit']:hover {
+button[type="submit"]:hover {
   background-color: #677bc4;
 }
 
